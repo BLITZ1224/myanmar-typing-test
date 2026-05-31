@@ -1,34 +1,63 @@
 body {
     font-family: 'Pyidaungsu', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #323437; /* Monkeytype background */
+    color: #646669; /* Untyped text color */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
+
 .container {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    max-width: 500px;
-    width: 100%;
+    width: 80%;
+    max-width: 800px;
 }
-#quote-display {
-    font-size: 1.2rem;
+
+/* စာသားပြသမည့်နေရာ */
+#words-container {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    word-break: break-word;
+    user-select: none;
     margin-bottom: 20px;
-    background: #eef2f3;
-    padding: 15px;
-    border-radius: 5px;
 }
-textarea {
-    width: 100%;
-    height: 80px;
-    font-size: 1.1rem;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+
+/* စာလုံးတစ်လုံးချင်းစီရဲ့ အခြေအနေအရောင်များ */
+.char {
+    position: relative;
+    transition: color 0.1s ease;
+}
+
+.char.correct {
+    color: #d1d0c5; /* ရိုက်ပြီး မှန်တဲ့စာလုံး (အဖြူရောင်ဆန်းဆန်း) */
+}
+
+.char.incorrect {
+    color: #ca4754; /* ရိုက်မှားတဲ့စာလုံး (အနီရောင်) */
+    background-color: rgba(202, 71, 84, 0.2);
+}
+
+/* စာရိုက်ရမည့်ကွက်ကို ကွယ်ထားမည် (ဒါပေမဲ့ အလုပ်လုပ်နေမည်) */
+#hidden-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* လက်ရှိရောက်နေတဲ့နေရာကို ပြပေးမယ့် မျဉ်းတုံး (Caret) */
+.char.current::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 2px;
+    height: 1.4rem;
+    background-color: #e2b714; /* Monkeytype ဝါကျင်ကျင် Caret */
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
