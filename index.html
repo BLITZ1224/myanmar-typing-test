@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>မြန်မာစာ လက်ကွက်လေ့ကျင့်ရန်</title>
+    <title>Myanmar Monkeytype Clone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h2>မြန်မာစာ လက်ကွက်ရိုက် စမ်းသပ်ခြင်း</h2>
-        <p id="quote-display">မြန်မာနိုင်ငံသည် အာရှတိုက်တွင် တည်ရှိသည်။</p>
-        <textarea id="quote-input" placeholder="အပေါ်က စာသားအတိုင်း လိုက်ရိုက်ပါ..." autofocus></textarea>
-        <div class="result">
-            <p>မှန်ကန်မှု: <span id="accuracy">100</span>%</p>
-        </div>
+        <!-- စာသားပြသမည့် နေရာ -->
+        <div id="words-container"></div>
+        
+        <!-- အနောက်ကွယ်ကနေ ရိုက်ချက်တွေကို ဖမ်းမည့် input -->
+        <input type="text" id="hidden-input" autocomplete="off" autofocus>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
