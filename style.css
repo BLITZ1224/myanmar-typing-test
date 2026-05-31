@@ -1,0 +1,34 @@
+body {
+    font-family: 'Pyidaungsu', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+#quote-display {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    background: #eef2f3;
+    padding: 15px;
+    border-radius: 5px;
+}
+textarea {
+    width: 100%;
+    height: 80px;
+    font-size: 1.1rem;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
